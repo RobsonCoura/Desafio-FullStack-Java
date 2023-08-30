@@ -1,0 +1,5 @@
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+    try-it-out-enabled: true
+  packages-to-scan: br.com.juridico.totvs.fullstack.Backend
