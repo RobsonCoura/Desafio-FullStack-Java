@@ -19,7 +19,7 @@ export class CadastroPaisesComponent implements OnInit {
 		private route: ActivatedRoute,
 		private router: Router,
 		private http: HttpService
-		) { 
+		) {
 
 		this.formPais = this.formBuilder.group({
 			nome: ['', Validators.compose([Validators.required])],
@@ -31,7 +31,7 @@ export class CadastroPaisesComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.idPais = this.route.snapshot.paramMap.get('idPais');
-		if (this.idPais !== null){
+		if (this.idPais !== null && this.idPais !== ""){
 			this.buscaDadosPais()
 			this.title = "Alteração do País"
 		}
@@ -39,7 +39,7 @@ export class CadastroPaisesComponent implements OnInit {
 
 	salvar(){
 		if (this.validarRegistro()){
-			if (this.idPais === null){
+			if (this.idPais === null || this.idPais === ""){
 				this.enviarPost()
 			} else {
 				this.enviarPut()
