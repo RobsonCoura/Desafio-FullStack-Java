@@ -47,12 +47,18 @@ API de Pontos Turísticos é uma aplicação full stack web criado com o objetiv
 
 ## 📄 Documentação
 
-Para acessar o Swagger UI click nesse link: **[Swagger UI](http://localhost:8080/swagger-ui/index.html)**
+Para acessar o Swagger UI click nesse link: 👉🏼 **[Swagger UI](http://localhost:8080/swagger-ui/index.html)**
 
+---
 
 ## 🎨 Layout página do Swagger UI
 
-![Web 1](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Layout-POST-ponto-tur%C3%ADstico.PNG)
+![Web 1](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Tela-swagger-01.png)
+![Web 2](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Tela-swagger-02.png)
+![Web 3](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Tela-swagger-03.png)
+![Web 4](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Tela-swagger-04.png)
+![Web 5](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Tela-swagger-05.png)
+![Web 6](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Tela-swagger-06.png)
 
 ---
 
@@ -68,7 +74,7 @@ As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do proj
 - **[Apache Tomcat](https://tomcat.apache.org/)**
 
 ### Front end
-- **[HTML / CSS](https://www.w3schools.com/w3css/w3css_downloads.asp)**
+- **[HTML / CSS / JavaScript](https://www.w3schools.com/w3css/w3css_downloads.asp)**
 - **[TypeScript](https://www.typescriptlang.org/download)**
 - **[PO-UI](https://po-ui.io/)**
 - **[Angular](https://angular.io/)**
@@ -88,7 +94,7 @@ Dentro dessas funcionalidades temos as seguintes necessidades:
 ## ▶ Como executar o projeto
 
 ### Back end
-Pré-requisitos: Java 11
+Pré-requisitos: Java 11 / Intellij ou Eclipse
 
 ```bash
 # clonar repositório
@@ -101,8 +107,20 @@ cd backend
 ./mvnw spring-boot:run
 ```
 
+#### 01. Passo abrir o intellij IDEA e clicar em File na aba superior a esquerda.
+![Web 1](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Abrindo-o-projeto-no-intellij.png)
+#### 02. Passo procurar aonde salvo o projeto que fez o clone no diretório do HD da sua máquina.
+![Web 2](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Buscando-a-pasta-aonde-o-projeto-foi-alocado.png)
+#### 03. Passo abrir a arvore de estrutura do projeto clicando na seta em cima da pasta Desafio-FullStack-Java para expandir para baixo 👇 e vai abrindo as pastas conforme mostra a imagem abaixo até chegar na pasta java e achar a classe principal chamada BackendApplication clicar com botao direito e apertar em Run 'BackendAplicca....(main)'.
+![Web 2](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Rodando-aplicacao-do-back-end.png)
+
+---
+
 ## Front end web
 Pré-requisitos: npm / yarn
+
+#### 01. Passo apertar na aba inferior a esquerda chamada terminal.
+![Web 1](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Rodando-aplicacao-front-end.png)
 
 ```bash
 
@@ -116,6 +134,7 @@ npm install
 npm run start
 ```
 
+---
 # Autor ©
 
 Robson Coura
