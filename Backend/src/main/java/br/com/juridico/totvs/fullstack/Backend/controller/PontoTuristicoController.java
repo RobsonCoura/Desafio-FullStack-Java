@@ -27,7 +27,7 @@ public class PontoTuristicoController {
     }
 
     @GetMapping
-    @Operation(summary = "Buscar uma lista de países.")
+    @Operation(summary = "Buscar uma lista de ponto turístico.")
     public List<PontoTuristicoDTO> getAll() {
         return this.pontoTuristicoService.getAllPontoTuristico();
     }
