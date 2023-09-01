@@ -7,12 +7,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 @SpringBootApplication
 public class BackendApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(BackendApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BackendApplication.class, args);
+    }
 
-	@GetMapping
-	public ModelAndView swaggerUi() {
-		return new ModelAndView("redirect:/swagger-ui/");
-	}
+    @GetMapping
+    public ModelAndView swaggerUi() {
+        return new ModelAndView("redirect:/swagger-ui/");
+    }
 }

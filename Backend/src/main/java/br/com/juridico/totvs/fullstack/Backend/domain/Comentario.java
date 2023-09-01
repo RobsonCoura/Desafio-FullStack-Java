@@ -2,8 +2,6 @@ package br.com.juridico.totvs.fullstack.Backend.domain;
 
 import br.com.juridico.totvs.fullstack.Backend.service.dto.ComentarioDTO;
 
-import java.time.LocalDateTime;
-
 public class Comentario {
 
     private Long id;
@@ -14,14 +12,14 @@ public class Comentario {
 
     private String nomeDoAutor;
 
-    private LocalDateTime dataDaCriacao;
+//    private LocalDateTime dataDaCriacao;
 
-    public Comentario(Long id, Long pontoTuristicoId, String descricao, String nomeDoAutor, LocalDateTime dataDaCriacao) {
+    public Comentario(Long id, Long pontoTuristicoId, String descricao, String nomeDoAutor) {
         this.id = id;
         this.pontoTuristicoId = pontoTuristicoId;
         this.descricao = descricao;
         this.nomeDoAutor = nomeDoAutor;
-        this.dataDaCriacao = dataDaCriacao;
+//        this.dataDaCriacao = dataDaCriacao;
     }
 
     public Comentario(ComentarioDTO comentarioDTO) {
@@ -29,7 +27,7 @@ public class Comentario {
         this.pontoTuristicoId = comentarioDTO.getPontoTuristicoId();
         this.descricao = comentarioDTO.getDescricao();
         this.nomeDoAutor = comentarioDTO.getNomeDoAutor();
-        this.dataDaCriacao = comentarioDTO.getDataDaCriacao();
+//        this.dataDaCriacao = comentarioDTO.getDataDaCriacao();
     }
 
     public Long getId() {
@@ -64,11 +62,11 @@ public class Comentario {
         this.nomeDoAutor = nomeDoAutor;
     }
 
-    public LocalDateTime getDataDaCriacao() {
-        return dataDaCriacao;
-    }
-
-    public void setDataDaCriacao(LocalDateTime dataDaCriacao) {
-        this.dataDaCriacao = dataDaCriacao;
-    }
+//    public LocalDateTime getDataDaCriacao() {
+//        return dataDaCriacao;
+//    }
+//
+//    public void setDataDaCriacao(LocalDateTime dataDaCriacao) {
+//        this.dataDaCriacao = dataDaCriacao;
+//    }
 }

@@ -10,10 +10,18 @@ import java.util.List;
 @Service
 public interface PaisService {
     List<Pais> listPais = null;
+
     public PaisDTO create(PaisCreateUpdateDTO paisCreateUpdateDTO);
+
     public PaisDTO update(Long id, PaisCreateUpdateDTO paisCreateUpdateDTO);
+
     public void delete(Long id);
+
     public PaisDTO getPaisbyId(Long id);
+
     public List<PaisDTO> getPaisByContinente(String continente);
+
+    public List<PaisDTO> getPaisByPontoTuriscoId(Long pontoTuriscoId);
+
     public List<PaisDTO> getAllPais();
 }

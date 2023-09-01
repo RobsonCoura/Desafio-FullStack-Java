@@ -6,7 +6,7 @@ public class PaisCreateUpdateDTO {
     private String continente;
     private int ddi;
 
-    public PaisCreateUpdateDTO(){
+    public PaisCreateUpdateDTO() {
 
     }
 

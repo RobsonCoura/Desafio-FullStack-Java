@@ -1,6 +1,5 @@
 package br.com.juridico.totvs.fullstack.Backend.service.dto;
 
-import br.com.juridico.totvs.fullstack.Backend.domain.Comentario;
 import br.com.juridico.totvs.fullstack.Backend.domain.PontoTuristico;
 
 import java.util.List;
@@ -19,6 +18,8 @@ public class PontoTuristicoDTO {
 
     private List<ComentarioDTO> comentarios;
 
+    private List<PaisDTO> pais;
+
     public PontoTuristicoDTO(Long id, Long paisId, String cidade, String nome, String estacaoVisita) {
         this.id = id;
         this.paisId = paisId;
@@ -33,6 +34,14 @@ public class PontoTuristicoDTO {
         this.cidade = pontoTuristico.getCidade();
         this.nome = pontoTuristico.getNome();
         this.estacaoVisita = pontoTuristico.getEstacaoVisita();
+    }
+
+    public List<PaisDTO> getPais() {
+        return pais;
+    }
+
+    public void setPais(List<PaisDTO> pais) {
+        this.pais = pais;
     }
 
     public Long getId() {

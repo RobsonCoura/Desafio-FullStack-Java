@@ -1,9 +1,5 @@
 package br.com.juridico.totvs.fullstack.Backend.service.dto;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
-import java.time.LocalDateTime;
-
 public class ComentarioCreateUpdateDTO {
 
     private Long pontoTuristicoId;
@@ -12,8 +8,8 @@ public class ComentarioCreateUpdateDTO {
 
     private String nomeDoAutor;
 
-    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
-    private LocalDateTime dataDaCriacao;
+//    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
+//    private LocalDateTime dataDaCriacao;
 
     public ComentarioCreateUpdateDTO() {
     }
@@ -42,11 +38,11 @@ public class ComentarioCreateUpdateDTO {
         this.nomeDoAutor = nomeDoAutor;
     }
 
-    public LocalDateTime getDataDaCriacao() {
-        return dataDaCriacao;
-    }
-
-    public void setDataDaCriacao(LocalDateTime dataDaCriacao) {
-        this.dataDaCriacao = dataDaCriacao;
-    }
+//    public LocalDateTime getDataDaCriacao() {
+//        return dataDaCriacao;
+//    }
+//
+//    public void setDataDaCriacao(LocalDateTime dataDaCriacao) {
+//        this.dataDaCriacao = dataDaCriacao;
+//    }
 }

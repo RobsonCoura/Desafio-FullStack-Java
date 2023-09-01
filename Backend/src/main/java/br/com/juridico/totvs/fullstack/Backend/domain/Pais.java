@@ -10,7 +10,7 @@ public class Pais {
     private String continente;
     private int ddi;
 
-    public Pais(Long id, String nome, String sigla, String continente, int ddi){
+    public Pais(Long id, String nome, String sigla, String continente, int ddi) {
         this.id = id;
         this.nome = nome;
         this.sigla = sigla;
@@ -18,7 +18,8 @@ public class Pais {
         this.ddi = ddi;
     }
 
-    public Pais(PaisDTO paisDTO){
+
+    public Pais(PaisDTO paisDTO) {
         this.id = paisDTO.getId();
         this.nome = paisDTO.getNome();
         this.sigla = paisDTO.getSigla();
@@ -65,4 +66,5 @@ public class Pais {
     public void setDdi(int ddi) {
         this.ddi = ddi;
     }
+
 }

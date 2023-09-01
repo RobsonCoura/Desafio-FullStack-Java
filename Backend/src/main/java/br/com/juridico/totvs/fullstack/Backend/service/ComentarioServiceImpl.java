@@ -7,8 +7,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.time.LocalDateTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
@@ -22,8 +24,8 @@ public class ComentarioServiceImpl implements ComentarioService {
         this.listComentario.add(new Comentario(1L,
                 1L,
                 "BRASÍLIA",
-                "PALÁCIO CENTRAL",
-                LocalDateTime.now()));
+                "PALÁCIO CENTRAL"));
+//                LocalDateTime.now()));
     }
 
     @Override
@@ -32,8 +34,8 @@ public class ComentarioServiceImpl implements ComentarioService {
                 this.getNewId(),
                 comentarioCreateUpdateDTO.getPontoTuristicoId(),
                 comentarioCreateUpdateDTO.getDescricao(),
-                comentarioCreateUpdateDTO.getNomeDoAutor(),
-                comentarioCreateUpdateDTO.getDataDaCriacao()
+                comentarioCreateUpdateDTO.getNomeDoAutor()
+//                comentarioCreateUpdateDTO.getDataDaCriacao()
         );
 
 

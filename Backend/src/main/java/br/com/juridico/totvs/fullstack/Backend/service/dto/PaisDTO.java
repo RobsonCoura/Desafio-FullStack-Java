@@ -9,15 +9,16 @@ public class PaisDTO {
     private String continente;
     private int ddi;
 
-    public PaisDTO(Long id, String nome, String sigla, String continente, int ddd){
+    public PaisDTO(Long id, String nome, String sigla, String continente, int ddi) {
         this.id = id;
         this.nome = nome;
         this.sigla = sigla;
         this.continente = continente;
         this.ddi = ddi;
+
     }
 
-    public PaisDTO(Pais pais){
+    public PaisDTO(Pais pais) {
         this.id = pais.getId();
         this.nome = pais.getNome();
         this.continente = pais.getContinente();
@@ -61,7 +62,8 @@ public class PaisDTO {
         return ddi;
     }
 
-    public void setDdd(int ddi) {
+    public void setDdi(int ddi) {
         this.ddi = ddi;
     }
+
 }
