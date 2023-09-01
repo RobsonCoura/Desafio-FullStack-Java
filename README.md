@@ -13,35 +13,15 @@ API de Pontos Turísticos é uma aplicação full stack web criado com o objetiv
 
 ---
 
-## 🎨 Layout página de países
+## 🎨 Layout CRUD de países
 
-#### ✅ CREATE - Cadastrar um país.
-![Web 1](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Layout-POST-de-pa%C3%ADs.PNG)
-
-#### 🔎 READ - Ler uma lista de países.
-![Web 2](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Layout-GET-de-pais.PNG)
-
-#### 🔄 UPDATE - Atualizar um país.
-![Web 3](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Layout-PUT-de-pa%C3%ADs.PNG)
-
-#### ❌ DELETE - Apagar um país.
-![Web 3](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Layout-DELETE-de-pa%C3%ADs.PNG)
+![Web 1](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/media/Teste-API-CRUD-Pais.gif)
 
 ---
 
-## 🎨 Layout página de pontos turísticos
+## 🎨 Layout CRUD de pontos turísticos e comentários
 
-#### ✅ CREATE - Cadastrar um ponto turístico.
-![Web 1](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Layout-POST-ponto-tur%C3%ADstico.PNG)
-
-#### 🔎 READ - Ler uma lista de pontos turísticos.
-![Web 2](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Layout-GET-de-ponto-tur%C3%ADstico.PNG)
-
-#### 🔄 UPDATE - Atualizar um ponto turístico.
-![Web 3](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Layout-PUT-de-ponto-tur%C3%ADstico.PNG)
-
-#### ❌ DELETE - Apagar um ponto turístico.
-![Web 3](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Layout-DELETE-de-ponto-turistico.PNG)
+![Web 1](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/media/Teste-API-CRUD-Ponto-Turistico-Comentarios.gif)
 
 ---
 
@@ -51,14 +31,9 @@ Para acessar o Swagger UI click nesse link: 👉🏼 **[Swagger UI](http://local
 
 ---
 
-## 🎨 Layout página do Swagger UI
+## 🎨 Layout da interface do Swagger UI
 
-![Web 1](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Tela-swagger-01.png)
-![Web 2](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Tela-swagger-02.png)
-![Web 3](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Tela-swagger-03.png)
-![Web 4](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Tela-swagger-04.png)
-![Web 5](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Tela-swagger-05.png)
-![Web 6](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Tela-swagger-06.png)
+![Web 1](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/media/Interface-swagger-teste-documentacao.gif)
 
 ---
 
@@ -106,21 +81,14 @@ cd backend
 # executar o projeto
 ./mvnw spring-boot:run
 ```
-
-#### 01. Passo abrir o intellij IDEA e clicar em File na aba superior a esquerda.
-![Web 1](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Abrindo-o-projeto-no-intellij.png)
-#### 02. Passo procurar aonde salvo o projeto que fez o clone no diretório do HD da sua máquina.
-![Web 2](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Buscando-a-pasta-aonde-o-projeto-foi-alocado.png)
-#### 03. Passo abrir a arvore de estrutura do projeto clicando na seta em cima da pasta Desafio-FullStack-Java para expandir para baixo 👇 e vai abrindo as pastas conforme mostra a imagem abaixo até chegar na pasta java e achar a classe principal chamada BackendApplication clicar com botao direito e apertar em Run 'BackendAplicca....(main)'.
-![Web 2](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Rodando-aplicacao-do-back-end.png)
+---
+#### Rodando a aplicação no back-end.
+![Web 1](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/media/Rodando-aplicacao-no-back-end.gif)
 
 ---
 
 ## Front end web
 Pré-requisitos: npm / yarn
-
-#### 01. Passo apertar na aba inferior a esquerda chamada terminal.
-![Web 1](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/assets/Rodando-aplicacao-front-end.png)
 
 ```bash
 
@@ -133,6 +101,9 @@ npm install
 # executar o projeto
 npm run start
 ```
+
+#### Rodando a aplicação no front-end.
+![Web 1](https://github.com/RobsonCoura/Desafio-FullStack-Java/blob/main/media/Rodando-aplicacao-no-front-end.gif)
 
 ---
 # Autor ©
