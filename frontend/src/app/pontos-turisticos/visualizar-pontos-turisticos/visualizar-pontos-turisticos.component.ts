@@ -16,6 +16,7 @@ export class VisualizarPontosTuristicosComponent implements OnInit {
   idPontoTuristico: string;
   pontoTuristico: PontosTuristicos;
   title: string;
+  
   constructor(
     private poNotification: PoNotificationService,
     private route: ActivatedRoute,
