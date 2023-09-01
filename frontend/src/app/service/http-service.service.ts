@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-const api = 'api/'
+const api = 'http://localhost:8080/'
 
 @Injectable({
   providedIn: 'root'
@@ -25,5 +25,13 @@ export class HttpService {
 
 	delete(url: string): Observable<any>{
 		return this.http.delete(api + url)
+	}
+
+	getCountry(): Observable<any> {
+		return this.http.get(api + '/pais')
+	}
+
+	getComentario(idComentario: string | number): Observable<any> {
+		return this.http.get(`${api}/pontoturistico/${idComentario}`)
 	}
 }
