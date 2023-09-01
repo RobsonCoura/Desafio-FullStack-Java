@@ -19,9 +19,11 @@ public class PontoTuristicoServiceImpl implements PontoTuristicoService {
     List<PontoTuristico> listPontoTuristico = null;
 
     private final ComentarioService comentarioService;
+    private final PaisService paisService;
 
-    PontoTuristicoServiceImpl(ComentarioService comentarioService) {
+    PontoTuristicoServiceImpl(ComentarioService comentarioService, PaisService paisService) {
         this.comentarioService = comentarioService;
+        this.paisService = paisService;
         this.listPontoTuristico = new ArrayList<>();
         this.listPontoTuristico.add(new PontoTuristico(1L,
                 1L,
@@ -113,6 +115,7 @@ public class PontoTuristicoServiceImpl implements PontoTuristicoService {
         listaPontoTuristicoDTO.stream()
                 .forEach(p -> {
                     p.setComentarios(comentarioService.getComentarioByPontoTuriscoId(p.getId()));
+                    p.setPais(paisService.getPaisByPontoTuriscoId(p.getId()));
                 });
 
         return listaPontoTuristicoDTO;

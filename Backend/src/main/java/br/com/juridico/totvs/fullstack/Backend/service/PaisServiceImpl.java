@@ -7,16 +7,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 @Service
 public class PaisServiceImpl implements PaisService {
     List<Pais> listPais = null;
 
-    PaisServiceImpl(){
+    PaisServiceImpl() {
         this.listPais = new ArrayList<>();
         this.listPais.add(new Pais(1L,
                 "Brasil",
@@ -43,7 +45,7 @@ public class PaisServiceImpl implements PaisService {
     public PaisDTO update(Long id, PaisCreateUpdateDTO paisCreateUpdateDTO) {
         Pais pais = this.getPaisById(id);
         int index = this.listPais.indexOf(pais);
-        if (pais == null){
+        if (pais == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
 
@@ -65,7 +67,7 @@ public class PaisServiceImpl implements PaisService {
     @Override
     public PaisDTO getPaisbyId(Long id) {
         Pais pais = this.getPaisById(id);
-        if (pais == null){
+        if (pais == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
         return new PaisDTO(pais);
@@ -80,31 +82,39 @@ public class PaisServiceImpl implements PaisService {
     }
 
     @Override
+    public List<PaisDTO> getPaisByPontoTuriscoId(Long pontoTuriscoId) {
+        return this.listPais.stream()
+                .filter(x -> x.getId().equals(pontoTuriscoId))
+                .map(pais -> new PaisDTO(pais))
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public List<PaisDTO> getAllPais() {
         return this.listPais.stream()
                 .map(pais -> new PaisDTO(pais))
                 .collect(Collectors.toList());
     }
 
-    private Long getNewId(){
-        if (this.listPais.size() > 0){
+    private Long getNewId() {
+        if (this.listPais.size() > 0) {
             return this.listPais.stream().max(Comparator
                             .comparingDouble(Pais::getId))
                     .get()
-                    .getId()+1;
+                    .getId() + 1;
         } else {
             return Long.valueOf(1);
         }
     }
 
-    private Pais getPaisById(Long id){
+    private Pais getPaisById(Long id) {
         return this.listPais.stream()
                 .filter(x -> Objects.equals(x.getId(), id))
                 .findFirst()
                 .orElse(null);
     }
 
-    private int getPaisIndexById(Long id){
+    private int getPaisIndexById(Long id) {
         AtomicInteger index = new AtomicInteger();
         return this.listPais.stream()
                 .peek(p -> index.incrementAndGet())
