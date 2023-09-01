@@ -1,36 +1,24 @@
-<po-page-detail
-  [p-title]="title">
-  <form [formGroup]="formPontoTuristico">
-    <po-input
-      class="po-sm-4 po-md-4 po-lg-3 po-xl-3"
-      formControlName="nome"
-      p-label="Nome">
+<po-page-detail [p-title]="title">
+  <form [formGroup]="formPontoTuristico" class="flex">
+    <div>
+      <label for="selectCountry" class="labelSelect">Pais</label>
+      <select id="selectCountry" class="select" value="" name="pais" formControlName="paisId">
+        <option value=""></option>
+        <ng-container *ngFor="let pais of paises">
+          <option value="{{ pais.id }}">{{ pais.nome }}</option>
+        </ng-container>
+      </select>
+    </div>
+    <po-input class="po-sm-4 po-md-4 po-lg-3 po-xl-3" formControlName="cidade" p-label="Cidade">
     </po-input>
-    <po-input
-      class="po-sm-4 po-md-4 po-lg-3 po-xl-3"
-      formControlName="paisId"
-      p-label="País Id">
+    <po-input class="po-sm-4 po-md-4 po-lg-3 po-xl-3 po-flex" formControlName="nome" p-label="Nome">
     </po-input>
-    <po-input
-      class="po-sm-4 po-md-4 po-lg-3 po-xl-3"
-      formControlName="cidade"
-      p-label="Cidade">
-    </po-input>
-    <po-input
-      class="po-sm-12 po-md-12 po-lg-5 po-xl-5"
-      formControlName="estacaoVisita"
-      p-label="Estação Visita">
+
+    <po-input class="po-sm-12 po-md-12 po-lg-5 po-xl-5" formControlName="estacaoVisita" p-label="Estação Visita">
     </po-input>
   </form>
-
   <div class="po-row po-pt-2" style="justify-content: flex-end;">
-    <po-button
-      class="po-sm-3 po-md-3 po-lg-1 po-xl-1"
-      (p-click)="salvar()"
-      p-label="Salvar"></po-button>
-    <po-button
-      class="po-sm-3 po-md-3 po-lg-1 po-xl-1"
-      (p-click)="voltar()"
-      p-label="Cancelar"></po-button>
+    <po-button class="po-sm-3 po-md-3 po-lg-1 po-xl-1" (p-click)="salvar()" p-label="Salvar"></po-button>
+    <po-button class="po-sm-3 po-md-3 po-lg-1 po-xl-1" (p-click)="voltar()" p-label="Cancelar"></po-button>
   </div>
 </po-page-detail>
